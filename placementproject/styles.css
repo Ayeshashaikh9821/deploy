@@ -1,0 +1,266 @@
+/* General Body Styling */
+body {
+    font-family: Arial,"Big Shoulders Stencil" sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #002D62;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #002D62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: #FFFFFF;
+    animation: slideIn 1s ease-out;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #00AEEF;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 1s ease-out;
+}
+
+.dropbtn:hover {
+    background-color: #0095D5;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F5F5F5;
+    border: 1px solid #002D62;
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #002D62;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #00AEEF;
+    color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar .dropdown {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 8px 20px;
+}
+
+/* Hero Section */
+.hero-section img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 0;
+    display: block;
+    animation: zoomIn 1s ease-out;
+}
+
+/* Vision Section */
+.content-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: #e5e5e5;
+    margin-top: 0;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.left-image {
+    flex: 1;
+    text-align: center;
+}
+
+.vision-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.vision-text {
+    max-width: 750px;
+    flex: 1.8;
+    text-align: justify;
+    margin-top: 0;
+    line-height: 1.6;
+    font-size: 25px;
+    padding-left: 20;
+   
+}
+
+.vision-text h2 {
+    color: #002D62;
+    margin-bottom: 10px;   
+}
+
+.vision-text p {
+    color: #333333;
+    line-height: 1.6;
+}
+
+.vision-section {
+    margin-bottom: 40px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #00AEEF;
+}
+
+/* Footer Section */
+footer {
+    background-color: #002D62;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #00AEEF;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #00AEEF;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.follow-us {
+    color: #FFFFFF;
+    margin-top: 18px;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>PLACEMENT MANAGEMENT SYSTEM</h1>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Login ▼</button>
+            <div class="dropdown-content" style="display: none;">
+                <a href="student_login.html">Student </a>
+                <a href="company_login.html">Company </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropbtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            // Toggle Dropdown
+            dropbtn.addEventListener('click', function (event) {
+                event.stopPropagation();  // Prevents the click from closing immediately
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Close Dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!dropbtn.contains(event.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="ttpys3.jpg" alt="Placement Management System">
+    </div>
+
+    <!-- Vision Section -->
+    <div class="content-section">
+        <div class="left-image">
+            <img src="vision.jpg" alt="Our Vision Image" class="vision-image">
+        </div>
+        <div class="vision-text">
+            <h1>OUR VISION</h1>
+            <p>
+                "Equipping the students 
+                with relevant and conceptualized 
+                professional skills and 
+                guiding them towards a bright future
+                and career all around the 
+                world with the values of –
+                <br><br>
+                <span class="highlight">Sincerity</span>, 
+                <span class="highlight">Hard Work</span>, and 
+                <span class="highlight">Justice</span>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <p>Email: contact@placementsystem.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 Career Lane, Cityville</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="follow-us">Follow Us</h3>
+                <p class="follow-us">Stay connected:</p>
+                <a href="#" class="follow-us">Facebook</a> | 
+                <a href="#" class="follow-us">Twitter</a> | 
+                <a href="#" class="follow-us">LinkedIn</a>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Placement Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
